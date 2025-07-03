@@ -23,13 +23,14 @@
       margin-bottom: 20px;
     }
 
-    header img {
-      width: 168px; /* 140px * 1.2 = 168px (20% increase) */
-      max-width: 90vw;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+header img {
+  width: 18vw;          /* responsive scaling */
+  max-width: 200px;     /* cap on large screens */
+  min-width: 120px;     /* floor on small screens */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
     h1 {
       font-size: 3.5em;
