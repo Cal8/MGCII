@@ -30,3 +30,84 @@
       display: block;
       margin: 0 auto;
     }
+
+    h1 {
+      font-size: 3.5em;
+      margin: 0.2em 0;
+      color: #ffffff;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    p {
+      max-width: 600px;
+      line-height: 1.6em;
+      font-size: 1.2em;
+      color: #e0e0e0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .cta-button {
+      background: none;
+      border: 2px solid #56c2c0;
+      color: #56c2c0;
+      padding: 14px 28px;
+      font-size: 1em;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #56c2c0;
+      color: #0b1a24;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.95em;
+      color: #cccccc;
+      text-align: center;
+      width: 100%;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #f5b342;
+      text-decoration: none;
+      font-size: 1.3em;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="mgcii-logo.png" alt="MGCII Logo" />
+  </header>
+  <main>
+    <h1>IMAGINE THE FUTURE</h1>
+    <p>
+      Tackling the grand challenges of our time will take bold new approaches.<br>
+      From Maryland to the world, be part of something transformative.
+    </p>
+    <button class="cta-button" onclick="alert('Email signup coming soon!')">Stay in the Loop</button>
+  </main>
+  <footer>
+    <div class="social-icons">
+      <a href="#" title="LinkedIn">in</a>
+      <a href="#" title="Email">@</a>
+      <a href="#" title="Twitter">X</a>
+    </div>
+    <p>Coming Fall 2025</p>
+  </footer>
+</body>
+</html>
