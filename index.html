@@ -39,15 +39,17 @@
       animation: fadeIn 1.5s ease-in-out;
     }
 
-    .tagline {
-      font-size: 1.6em;
-      max-width: 700px;
-      line-height: 1.4em;
-      margin: 0 auto;
-      padding: 0 1em;
-      color: #e0e0e0;
-      animation: fadeIn 2s ease-in-out;
-    }
+   .tagline {
+  font-size: 1.6em;
+  max-width: 90vw;
+  line-height: 1.4em;
+  margin: 0 auto;
+  padding: 0 1em;
+  color: #e0e0e0;
+  animation: fadeIn 2s ease-in-out;
+  white-space: normal;
+  word-break: keep-all;
+}
 
     .cta-button {
       background: none;
@@ -103,9 +105,11 @@
     }
 
     @media (max-width: 600px) {
-      .tagline {
-        font-size: 1.2em;
-      }
+  .tagline {
+    font-size: 1.2em;
+    max-width: 95vw;
+    padding: 0;
+  }
 
       .cta-button {
         font-size: 0.95em;
