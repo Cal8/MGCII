@@ -50,12 +50,13 @@
     }
 
     .tagline {
+      font-family: 'Georgia', 'Times New Roman', serif;
       font-size: clamp(1rem, 4vw, 1.3rem);
       line-height: 1.3;
       color: #e0e0e0;
       margin: 0 auto 1em;
       max-width: 90vw;
-      animation: fadeIn 1.5s ease-in-out;
+      animation: fadeInTagline 1.5s ease-in-out 1.4s;
     }
 
     .cta-button {
@@ -74,6 +75,15 @@
     .cta-button:hover {
       background-color: #56c2c0;
       color: #0b1a24;
+    }
+
+    .launch-text {
+      font-size: 0.95em;
+      color: #cccccc;
+      margin-top: 1em;
+      font-style: italic;
+      opacity: 0.9;
+      animation: fadeIn 2.2s ease-in-out;
     }
 
     footer {
@@ -125,12 +135,16 @@
     }
 
     .footer-text {
-      margin: 0;
-      color: #cccccc;
+      display: none;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInTagline {
+      from { opacity: 0; transform: translateY(-8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
@@ -173,6 +187,7 @@
       From Maryland to the world, be part of something transformative.
     </p>
     <a href="form.html" class="cta-button">Stay in the Loop</a>
+    <p class="launch-text">Coming Fall 2025</p>
   </main>
 
   <footer>
@@ -191,7 +206,6 @@
           <span class="x-icon">X</span>
         </a>
       </div>
-      <p class="footer-text">Coming Fall 2025</p>
     </div>
   </footer>
 </body>
