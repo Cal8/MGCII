@@ -4,29 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>MGCII | Imagine the Future</title>
-
   <style>
-    body {
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #0b1a24, #112d3a);
       color: #ffffff;
-      text-align: center;
-      overflow-x: hidden;
+      overflow: hidden;
+    }
+
+    body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      justify-content: space-between;
     }
 
     header {
-      margin-top: 20px;
-      margin-bottom: 10px;
+      padding: 10px 0 0;
     }
 
     header img {
       width: 18vw;
-      max-width: 200px;
-      min-width: 120px;
+      max-width: 180px;
+      min-width: 100px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -36,41 +42,36 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 20px 10px 0 10px;
+      align-items: center;
+      padding: 10px;
+      text-align: center;
     }
 
     h1 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-size: clamp(2rem, 6vw, 3rem);
       margin: 0.2em 0;
-      color: #ffffff;
-      animation: fadeIn 1.5s ease-in-out;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     .tagline {
-      font-size: clamp(1.1rem, 4vw, 1.6rem);
-      max-width: 90vw;
-      line-height: 1.4em;
-      margin: 0 auto 1.2em auto;
-      padding: 0 1em;
+      font-size: clamp(1rem, 4vw, 1.4rem);
+      line-height: 1.3em;
       color: #e0e0e0;
-      animation: fadeIn 2s ease-in-out;
-      white-space: normal;
-      word-break: keep-all;
+      max-width: 90vw;
+      margin: 0 auto 1em;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     .cta-button {
       background: none;
       border: 2px solid #56c2c0;
       color: #56c2c0;
-      padding: 14px 28px;
+      padding: 10px 20px;
       font-size: 1em;
-      cursor: pointer;
       border-radius: 5px;
-      transition: all 0.3s ease;
       text-decoration: none;
-      display: inline-block;
+      transition: all 0.3s ease;
     }
 
     .cta-button:hover {
@@ -79,10 +80,9 @@
     }
 
     footer {
-      width: 100%;
-      color: #cccccc;
-      font-size: 0.95em;
-      margin-bottom: 20px;
+      padding-bottom: 10px;
+      font-size: 0.9em;
+      text-align: center;
     }
 
     .footer-container {
@@ -90,23 +90,21 @@
       flex-direction: column;
       align-items: center;
       gap: 0.5em;
-      padding: 1em;
     }
 
     .social-icons {
       display: flex;
-      gap: 1.2em;
+      gap: 1em;
       justify-content: center;
-      margin-bottom: 0.5em;
     }
 
     .social-icons a svg,
     .social-icons a span {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       fill: #f5b342;
-      display: inline-block;
-      transition: fill 0.3s ease;
+      color: #f5b342;
+      transition: 0.3s ease;
     }
 
     .social-icons a:hover svg,
@@ -115,40 +113,18 @@
       color: #ffffff;
     }
 
-    .social-icons .x-icon {
+    .x-icon {
       font-weight: bold;
-      font-size: 1.6em;
-      color: #f5b342;
+      font-size: 1.4em;
     }
 
     .footer-text {
       margin: 0;
-      font-size: 1em;
-    }
-
-    @media (max-width: 600px) {
-      .cta-button {
-        font-size: 0.95em;
-        padding: 12px 24px;
-      }
-
-      .footer-text {
-        font-size: 0.9em;
-      }
-
-      .social-icons a svg,
-      .social-icons a span {
-        width: 20px;
-        height: 20px;
-      }
-
-      .social-icons .x-icon {
-        font-size: 1.3em;
-      }
+      color: #ccc;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -160,12 +136,10 @@
 
   <main>
     <h1>IMAGINE THE FUTURE</h1>
-    <section class="hero">
-      <p class="tagline">
-        Tackling the grand challenges of our time will take bold new approaches.<br />
-        From Maryland to the world, be part of something transformative.
-      </p>
-    </section>
+    <p class="tagline">
+      Tackling the grand challenges of our time will take bold new approaches.<br />
+      From Maryland to the world, be part of something transformative.
+    </p>
     <a href="form.html" class="cta-button">Stay in the Loop</a>
   </main>
 
@@ -176,19 +150,7 @@
           <svg viewBox="0 0 448 512"><path d="M100.28 448H7.4V149.6h92.88zm-46.44-340c-29.5 0-53.3-23.8-53.3-53.3S24.34 1.4 53.84 1.4s53.3 23.8 53.3 53.3-23.8 53.3-53.3 53.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.4-48.4-79.4-48.5 0-55.9 37.9-55.9 77v148h-92.7V149.6h89v40.7h1.3c12.4-23.5 42.7-48.4 87.9-48.4 94 0 111.3 61.9 111.3 142.3V448z"/></svg>
         </a>
         <a href="mailto:info@marylandgrandchallenge.org" title="Email">
-  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-    <path d="M502.3 190.8 327.4 338.6c-20.5 17.5-51.3 17.5-71.8 0L9.7 190.8C3.6 185.8 0 178.3 0 170.3V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v90.3c0 8-3.6 15.5-9.7 20.5zM0 216.5V432c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V216.5l-165.1 141.1c-35.2 30-86.6 30-121.8 0L0 216.5z"/>
-  </svg>
-</a>
+          <svg viewBox="0 0 512 512"><path d="M502.3 190.8 327.4 338.6c-20.5 17.5-51.3 17.5-71.8 0L9.7 190.8C3.6 185.8 0 178.3 0 170.3V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v90.3c0 8-3.6 15.5-9.7 20.5zM0 216.5V432c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V216.5l-165.1 141.1c-35.2 30-86.6 30-121.8 0L0 216.5z"/></svg>
+        </a>
         <a href="https://www.instagram.com" target="_blank" title="Instagram">
-          <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.6 141 224.1 141zm0 189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12.1 27-27 27s-27-12.1-27-27 12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-.9-19.6-5-37-18.2-50.3S420.5 48.4 401 47.5c-19.6-.9-77.8-1.5-116.9-1.5s-97.3.6-116.9 1.5c-19.6.9-37 5-50.3 18.2S47.5 91.5 46.6 111c-.9 19.6-1.5 77.8-1.5 116.9s.6 97.3 1.5 116.9c.9 19.6 5 37 18.2 50.3s30.7 17.3 50.3 18.2c19.6.9 77.8 1.5 116.9 1.5s97.3-.6 116.9-1.5c19.6-.9 37-5 50.3-18.2s17.3-30.7 18.2-50.3c.9-19.6 1.5-77.8 1.5-116.9s-.6-97.3-1.5-116.9zM398.8 388c-6.2 15.7-18.4 27.9-34.1 34.1-23.6 9.3-79.6 7.2-140.6 7.2s-117 2.1-140.6-7.2c-15.7-6.2-27.9-18.4-34.1-34.1-9.3-23.6-7.2-79.6-7.2-140.6s-2.1-117 7.2-140.6c6.2-15.7 18.4-27.9 34.1-34.1 23.6-9.3 79.6-7.2 140.6-7.2s117-2.1 140.6 7.2c15.7 6.2 27.9 18.4 34.1 34.1 9.3 23.6 7.2 79.6 7.2 140.6s2.1 117-7.2 140.6z"/></svg>
-        </a>
-        <a href="https://twitter.com" target="_blank" title="X">
-          <span class="x-icon">X</span>
-        </a>
-      </div>
-      <p class="footer-text">Coming Fall 2025</p>
-    </div>
-  </footer>
-</body>
-</html>
+          <svg viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.6 141 224.1 141zm0 189.6c-41.2 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.5 74.7-74.7 74.7zm146.4-194.3c0 14.9-12.1 27-27 27s-27-12.1-27-27 12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-.9-19.6-5-37-18.2-50.3S420.5 48.4 401 47.5c-19.6-.9-77.8-1.5-116.9-1.5s-97.3.6-116.9 1.5c-19.6.9-37 5-50.3 18.2S47.5 91.5 46.6 111c-.9 19.6-1.5 77.8-1.5 116.9s.6 97.3 1.5 116.9c.9 19.6 5 37 18
